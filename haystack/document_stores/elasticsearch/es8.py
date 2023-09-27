@@ -277,7 +277,7 @@ class ElasticsearchDocumentStore(_ElasticsearchDocumentStore):
                     request_timeout=timeout,
                     node_class=node_class,
                 )
-
+'''
         # Test connection
         try:
             # ping uses a HEAD request on the root URI. In some cases, the user might not have permissions for that,
@@ -296,6 +296,7 @@ class ElasticsearchDocumentStore(_ElasticsearchDocumentStore):
                 f"and that it has finished the initial ramp up (can take > 30s). Also, make sure you are using the "
                 f"correct credentials if you are using a secured Elasticsearch instance."
             )
+    '''
         return client
 
     def _index_exists(self, index_name: str, headers: Optional[Dict[str, str]] = None) -> bool:
